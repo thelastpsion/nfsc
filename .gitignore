@@ -1,0 +1,7 @@
+**/*.APP
+**/*.MAP
+**/*.OBJ
+INSTALL/**
+**/*.DBD
+**/*.SYM
+**/*.SHD

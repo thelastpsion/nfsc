@@ -1,0 +1,72 @@
+# 
+# Keypad mappings by Odd Gripenstam (gripenstamol@decus.se)
+# Store this file as \opd\fnkeys.nfs on the psion
+# 
+#Ctrl-Shift-0      KP0
+#        .
+#        .
+#        .
+#Ctrl-Shift-9      KP9
+#Ctrl-Shift-.      KP.
+#Ctrl-Shift-,      KP,
+#Ctrl-Shift--      KP-
+#Ctrl-Shift-Enter  KP-ENTER
+#Ctrl-Shift-U      PF1
+#Ctrl-Shift-I      PF2
+#Ctrl-Shift-O      PF3
+#Ctrl-Shift-P      PF4
+#
+#I also defined Delete to DEL, and PgDn and PgUp to Next Screen and Prev
+#Screen, respectively:
+#
+# Key(Hex) Modifier(Hex) String
+fnkey		0008 00 \127
+fnkey		0030 06 \27Op
+fnkey		0031 06 \27Oq
+fnkey		0032 06 \27Or
+fnkey		0033 06 \27Os
+fnkey		0034 06 \27Ot
+fnkey		0035 06 \27Ou
+fnkey		0036 06 \27Ov
+fnkey		0037 06 \27Ow
+fnkey		0038 06 \27Ox
+fnkey		0039 06 \27Oy
+#
+fnkey		002C 06 \27Ol
+fnkey		002E 06 \27On
+fnkey		001F 06 \27Om
+fnkey		000D 06 \27OM
+#
+fnkey		0015 06 \27OP
+fnkey		0009 06 \27OQ
+fnkey		000F 06 \27OR
+fnkey		0010 06 \27OS
+#
+fnkey		0104 08 \27[5~
+fnkey		0105 08 \27[6~
+#
+# One more time, now with caps lock
+fnkey		0008 10 \127
+fnkey		0030 16 \27Op
+fnkey		0031 16 \27Oq
+fnkey		0032 16 \27Or
+fnkey		0033 16 \27Os
+fnkey		0034 16 \27Ot
+fnkey		0035 16 \27Ou
+fnkey		0036 16 \27Ov
+fnkey		0037 16 \27Ow
+fnkey		0038 16 \27Ox
+fnkey		0039 16 \27Oy
+#
+fnkey		002C 16 \27Ol
+fnkey		002E 16 \27On
+fnkey		001F 16 \27Om
+fnkey		000D 16 \27OM
+#
+fnkey		0015 16 \27OP
+fnkey		0009 16 \27OQ
+fnkey		000F 16 \27OR
+fnkey		0010 16 \27OS
+#
+fnkey		0104 18 \27[5~
+fnkey		0105 18 \27[6~

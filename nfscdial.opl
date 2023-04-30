@@ -1,0 +1,53 @@
+PROC dialinit:
+	local name$(8)
+
+	name$ = "NFSC.*"
+	nfscPid% = call($188,addr(name$)+1)
+	call($83,$204,0,0,0,0) rem MessInit, 4 msgs, 2 byte each
+	print "Now you can switch back to nfsc"
+ENDP
+
+PROC puts:(text$)
+	local data%(2)
+	local myvar$(255)
+
+	myvar$ = text$
+	data%(1) = addr(myvar$)
+	rem msendreceivew: send $40
+	call($683,nfscPid%,$40,0,addr(data%(1)))
+ENDP
+
+rem hotk:("x") Execute "Psion-X" in nfsc.app
+PROC hotk:(text$)
+	local data%(2),l%
+
+	data%(1) = asc(text$)
+	call($683,nfscPid%,$42,0,addr(data%(1)))
+ENDP
+
+PROC expect:(text$)
+	local data%(2), pM%, mStat%, l%
+	local buf1$(255),buf2$(255)
+
+	buf2$ = ""
+	data%(1) = addr(buf1$)
+	rem	Tell nfsc we need some text: msendreceivew
+	call($683,nfscPid%,$41,0,addr(data%(1)))
+	while 1
+		rem Wait for messages: mreceivea
+		call($183,addr(pM%),0,0,0,addr(mStat%))
+
+		iowait
+
+		if mStat% <> -46
+			if len(buf1$) + len(buf2$) > 255
+				buf2$ = right$(buf2$,255-len(buf1$))+buf1$
+			else
+				buf2$ = buf2$ + buf1$
+			endif
+			l%=loc(buf2$, text$)
+			call($783,pM%,l%) rem mfree
+			if l% > 0 : return : endif
+		endif
+	endwh
+ENDP

@@ -1,0 +1,8 @@
+#abort on
+#message "Transfering image files to Psion..."
+#file append XFER.LNK "COPY *.img rem::m:\img\*.img"
+#file append XFER.LNK "EXIT"
+#run 'mclink @XFER.LNK'
+#file delete XFER.LNK
+#message "Transfer done!"
+

@@ -1,0 +1,159 @@
+#include <hwim.rh>
+
+
+RESOURCE HELP_ARRAY nfsc_help
+{
+topic="Nfsc";
+topic_id=nfsc_help_index;
+}
+
+RESOURCE TOPIC_ARRAY nfsc_help_index
+{
+id_lst=
+{
+nfsc_about,
+nfsc_config,
+nfsc_unix,
+nfsc_serial,
+nfsc_emulator,
+nfsc_dialing,
+nfsc_xymodem
+};
+}
+
+RESOURCE HELP_ARRAY nfsc_about
+{
+topic="What is nfsc?";
+strlst=
+{
+STRING {str="Nfsc was originally only the Psion client for the";},
+STRING {str="UNIX to Psion communication package called p3nfsd.";},
+STRING {str="P3nfsd itself uses the NFS protocol to capture";},
+STRING {str="filesystem calls, but not for talking to Nfsc.";},
+STRING {str="In 1996 Nfsc received terminal emulation code which";},
+STRING {str="emulates a DEC vt100 terminal plus some features";},
+STRING {str="of its newer version, called vt220.";}
+};
+}
+
+RESOURCE HELP_ARRAY nfsc_config
+{
+topic="Configuration file";
+strlst=
+{
+STRING {str="The configuration file is a plain ASCII file, it can be";},
+STRING {str="edited with an editor, although each entry also can be";},
+STRING {str="configured from an nfsc dialog box.";},
+STRING {str="NOTE: You can reset all parameters to default by creating";},
+STRING {str="a new configuration from the system screen.";}
+};
+}
+
+RESOURCE HELP_ARRAY nfsc_unix
+{
+topic="UNIX client functions";
+strlst=
+{
+STRING {str="There are 3 protocols supported by Nfsc, set in";},
+STRING {str="the UNIX->Protocol dialog:";},
+STRING {str="";},
+STRING {str="1. Terminal only. - This is the choice if you are using";},
+STRING {str="Nfsc only as a terminal emulator.";},
+STRING {str="";},
+STRING {str="2. Old p3nfsd. - use this if you are talking to an old,";},
+STRING {str="i.e. pre 3.0 p3nfsd. In this mode Nfsc behaves like";},
+STRING {str="its OPL counterpart.";},
+STRING {str="";},
+STRING {str="3. Terminal + New p3nfsd. Use this if you are connected";},
+STRING {str="through a p3nfsd. This mode is the fastest and supports";},
+STRING {str="window resizing too.";},
+STRING {str="";},
+STRING {str="In the dialog box called from the UNIX->Export menu";},
+STRING {str="you can specify which Psion drives can be seen from the";},
+STRING {str="UNIX host where p3nfsd is running.";}
+};
+}
+
+RESOURCE HELP_ARRAY nfsc_serial
+{
+topic="The serial port";
+strlst=
+{
+STRING {str="The serial line parameters are set from the";},
+STRING {str="Serial->Parameters dialog.";},
+STRING {str="";},
+STRING {str="The entry called Flowcontrol is a simplified version";},
+STRING {str="of the next dialog box called: Handshake for experts,";},
+STRING {str="these are all the bits you can set.";},
+STRING {str="";},
+STRING {str="The status line - if switched on - displays the input &";},
+STRING {str="output characters, a debugging section, and a control";},
+STRING {str="section.";},
+STRING {str="The debugging section displays a character for each";},
+STRING {str="UNIX call, they are CAPS if the call failed.";},
+STRING {str="The Status line->Update freq. entry is for checking";},
+STRING {str="the cts/dsr/dcd lines of the serial line. If they are";},
+STRING {str="shown in CAPS, they are active.";},
+STRING {str="";},
+STRING {str="The break sent is not a real break, only a 180ms zero";},
+STRING {str="instead of a 250+ms one. It might work sometimes.";}
+};
+}
+
+RESOURCE HELP_ARRAY nfsc_emulator
+{
+topic="The VT100 emulator";
+strlst=
+{
+STRING {str="The emulator is a quite complete emulation of a vt100,";},
+STRING {str="most applications should work without problems.";},
+STRING {str="";},
+STRING {str="Missing/not implemented features:";},
+STRING {str="the blinking and grey attribute, double width and";},
+STRING {str="height characters. The alternate character set is not";},
+STRING {str="complete. 132 characters per line is not supported.";},
+STRING {str="";},
+STRING {str="A sample definition of the vt100 function keys is supplied,";},
+STRING {str="see the file itself for comments.";},
+STRING {str="";},
+STRING {str="Settings dialog:";},
+STRING {str="ISOtoIBM is meant for the umlaut conversion.";},
+STRING {str="Max. number of rows is a method to achieve 24 or 25 lines";},
+STRING {str="of screensize.";},
+STRING {str="A scrollback line consumes 81 bytes of memory, the maximum.";},
+STRING {str="is about 500 lines.";},
+STRING {str="";},
+STRING {str="Copy mode:";},
+STRING {str="It works only if scrollback is set to >30 lines.";},
+STRING {str="You can mark the text to be copied (with shifted arrows)";},
+STRING {str="and bring it to other Psion applications (e.g Word).";},
+STRING {str="You get unexpected data if the scrollbuffer wraps around";},
+STRING {str="the marked area";},
+STRING {str="";},
+STRING {str="Bring:";},
+STRING {str="Use it to copy data from other Psion applications into";},
+STRING {str="the emulator.";}
+};
+}
+
+RESOURCE HELP_ARRAY nfsc_dialing
+{
+topic="Dial support";
+strlst=
+{
+STRING {str="Dialing support is realized with an opl module.";},
+STRING {str="See the README for nfsc for a detailed description.";},
+STRING {str="There are sample files supplied with this program.";}
+};
+}
+
+RESOURCE HELP_ARRAY nfsc_xymodem
+{
+topic="X/Y modem support";
+strlst=
+{
+STRING {str="The X/Ymodem support is not well tested, as I don't";},
+STRING {str="have a proper description or programs to test it.";},
+STRING {str="Use the builtin application if you experience problems.";}
+};
+}

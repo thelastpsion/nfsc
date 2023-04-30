@@ -1,0 +1,15 @@
+#abort on
+#system epoc img
+#set epocinit=iplib
+#set priority=0xC0
+#set version=0x0400
+#model small jpi
+#pragma link_option(map=>off)
+#pragma link(hwif.lib)
+#compile NFSC.C
+#compile VT100.C
+#compile XYMODEM.C
+#compile PASTE.C
+#compile PARAMS.C
+#link NFSC
+#file delete NFSC.MAP

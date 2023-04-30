@@ -1,0 +1,9 @@
+#define NFSC_HELP 1
+#define NFSC_HELP_INDEX 2
+#define NFSC_ABOUT 3
+#define NFSC_CONFIG 4
+#define NFSC_UNIX 5
+#define NFSC_SERIAL 6
+#define NFSC_EMULATOR 7
+#define NFSC_DIALING 8
+#define NFSC_XYMODEM 9
