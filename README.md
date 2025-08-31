@@ -2,6 +2,9 @@
 
 By Rudolf König, Jürgen Weiger *et al*.
 
+> [!IMPORTANT]
+> This project is now hosted at Codeberg: https://codeberg.org/psion/nfsc
+
 ## Intro
 
 **Nfsc** is a terminal emulator. If this file is part of the p3nfs package,
